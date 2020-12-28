@@ -9,7 +9,7 @@
 <video id="video" controls autoplay></video>
 <script>
   var video = document.getElementById('video');
-  var videoSrc = 'https://cutt.ly/Lh5Vofm';
+  var videoSrc = decodeURIComponent(getURLParam('src','https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8'));
   if (Hls.isSupported()) {
     var hls = new Hls();
     hls.loadSource(videoSrc);
